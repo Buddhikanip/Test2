@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="refresh" content="10">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAT Live</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="logo final.png">
+    <script src="script.js"></script>
+    <!-- <link rel="stylesheet" href="nav.css"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+
+    <!-- Popper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <style>
+
+    </style>
+</head>
+
+<body onload="match6();">
+    <!-- <div class="container" id="bar">
+        <table align="center" max-width="700px">
+            <tr>
+                <td width="14.2%">
+                    <p id="logo"><img src="Images/Bull logo png_.png" alt="" class="img-fluid rounded" width="70px"><br></p>
+                    
+                </td>
+                <td rowspan="2" width="14.2%"><p><selection class="btTotal" id="btTotal">102/9</selection><br><span class="btOvers">(50)</span></p></td>
+                <td rowspan="2" width="43.2%"><p>SW won by 184 runs</p></td>
+                <td rowspan="2" width="14.2%"><p><selection class="statTotal" id="statTotal">100<br><span class="statOvers">(24.4)</span></p></td>
+                <td width="14.2%">
+                    <p id="logo"><img src="Images/stat.png" alt="" class="img-fluid rounded" width="70px"><br></p>
+                    
+                </td>
+            </tr>
+        </table>
+    </div> -->
+
+    <div class="container cont">
+        <!--<div class="header">
+            <div class="stage">Group Stage</div><br>
+            <div class="match">First Match</div>
+        </div>-->
+
+        <div class="tb" id="tb">
+            <table align="center" width="100%">
+                <tr>
+                    <td>
+                        <p id="logo"><img src="med.png" alt="" class="img-fluid rounded"><br></p>
+
+                    </td>
+                    <td rowspan="2" width="14.2%">
+                        <p id="score1">0/0<br></p><span><div id="t1Overs">(0.0)</div></span>
+                    </td>
+                    <td rowspan="2" width="14.2%"></td>
+                    <td rowspan="2" width="14.2%">
+                        <p id="score2">0/0<br></p><span><div id="t2Overs">(0.0)</div></span>
+                    </td>
+                    <td>
+                        <p id="logo"><img src="irr.png" alt="" class="img-fluid rounded"><br></p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="logoText">MediCorps<br></p>
+                    </td>
+                    <td>
+                        <p id="logoText">Irrational<br>Warrious</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="5">
+                        <!-- <p id="sum">SW won by 184 runs</p><br> -->
+                        <p id="sum"><span>Group Stage - 6 of 6</span></p>
+                        <!-- (Stat Warrious Wins 2)-->
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div id="poster"><img src="v6.jpg" alt="" class="rounded img-fluid"></div>
+    </div>
+    <div class="container" id="nav" style="display: none;">
+        <div class="navbar">
+            <button id="summary" class="active" onclick="document.getElementById('su').style.display='block', document.getElementById('card').style.display='none' , o() , p()">SUMMARY</button>
+            <button id="scorecard" onclick="document.getElementById('card').style.display='block', document.getElementById('su').style.display='none' , m() , n()">SCORECARD</button>
+        </div>
+    </div>
+    <div class="container sum" id="su" style="display: none;">
+        <br>
+        <hr>
+        <div class="title">
+            <img src="med.png" alt="" width="7%" class="img-fluid rounded"> MediCorps - 100/9 (9.5)<br><br>
+        </div>
+        <div class="pefLeft">
+            pathum Nissanka <br>55(66) <br><br> Charith Asalaka <br>52(56) <br><br> kusal Mendis <br>36(51) <br><br>
+        </div>
+        <div class="pefRight">
+            Richard Ngarava <br>2/46 (9) <br><br> Sean Williams <br>1/6 (2) <br><br> Ryan Burl <br>1/26 (6) <br><br>
+        </div>
+        <hr>
+        <div class="title">
+            <img src="irr.png" alt="" width="9%" class="rounded img-fluid"> Irrational Warrious - 100/9 (9.5)<br><br>
+        </div>
+        <div class="pefLeft">
+            pathum Nissanka <br>55(66) <br><br> Charith Asalaka <br>52(56) <br><br> kusal Mendis <br>36(51) <br><br>
+        </div>
+        <div class="pefRight">
+            Richard Ngarava <br>2/46 (9) <br><br> Sean Williams <br>1/6 (2) <br><br> Ryan Burl <br>1/26 (6) <br><br>
+        </div>
+    </div>
+    <div class="container" id="card" style="display: none;">
+        <div class="navbar teams">
+            <button id="team1" class="active" onclick="document.getElementById('t1').style.display='block', document.getElementById('t2').style.display='none' , q() , r()">MediCorps</button>
+            <button id="team2" onclick="document.getElementById('t2').style.display='block', document.getElementById('t1').style.display='none' , s() , t()">Irrational Warrious</button>
+        </div>
+        <div class="tb" id="t1">
+            <table id="bt" class="batt">
+                <tr id="topic">
+                    <td width="72%" id="bat"><span>Batting</span></td>
+                    <td id="r"><span>R</span></td>
+                    <td id="b"><span>B</span></td>
+                    <td id="four"><span>4s</span></td>
+                    <td id="six"><span>6s</span></td>
+                    <td id="sr"><span>S/R</span></td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Kavisha Abhishake (C)<br><span>run out(sub)</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Nipul Yansith (VC)<br><span>c Blessing Muzzarabani b Wellington Masakadza</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Bhanuka Nayanajith<br><span>c & b Ryan Burl</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Bimsara Anjana<br><span>run out (Ryan Burl)</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Sasanka Udana<br><span>b Blessing Muzarabani</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Lasith Madhuka<br><span>not out</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Sanuth Kalhan<br><span>not out</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Lakruwan Kasun<br><span>run out(sub)</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Lumbini Randika<br><span>run out(sub)</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Chathuni Ranasinghe<br><span>run out(sub)</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Masha Wickramasinghe<br><span>run out(sub)</span></td>
+                    <td id="r">55</td>
+                    <td id="b">66</td>
+                    <td id="four">4</td>
+                    <td id="six">0</td>
+                    <td id="sr">83.33</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Extras</td>
+                    <td id="r" style="position: relative; top: 0">7</td>
+                    <td width="23%" id="ex">(NB 1, W 3,B 2,LB 1)</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Total runs</td>
+                    <td id="r" style="position: relative;top: 0">254</td>
+                    <td width="23%">(9 wkts, 50 ov)</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="fall">
+                        Fall of Wickets<br> 80/1 <span>(K.Mendis, 17.2 ov)</span> 101/2 <span>(p.Nissanka, 22.2 ov)</span> 107/3 <span>(K.Mendis, 23.1 ov)</span> 149/4 <span>(D.Chandimal, 30.6 ov)</span> 185/5 <span>(D.Shanaka, 38.4 ov)</span> 193/6 <span>(C.Asalanka, 40.4 ov)</span>                        241/7 <span>(R.Mendis, 47.4 ov)</span> 247/8 <span>(D.Chameera, 48.5 ov)</span> 249/9 <span>(C.Karunarathne), 49.2 ov</span>
+                    </td>
+                </tr>
+            </table>
+            <!-- <table id="bt">
+                <tr>
+                    <td id="fall">
+                        Yet to Bat<br><span>Kavisha Abhishake (C) , Nipul Yansith (VC) , Bhanuka Nayanajith , Bimsara Anjana , Sasanka Udana , Pahasara Jayasuriya , Lasith Madhuka , Sanuth Kalhan , Lakruwan Kasun , Lumbini Randika (G) , Chathuni Ranasinghe (G) , Masha Wickramasinghe (G)</span>
+                    </td>
+                </tr>
+            </table> -->
+            <table id="ball" class="ball">
+                <tr id="topic">
+                    <td id="bat"><span>Bowling</span></td>
+                    <td id="r"><span>O</span></td>
+                    <td id="b"><span>M</span></td>
+                    <td id="four"><span>R</span></td>
+                    <td id="six"><span>W</span></td>
+                    <td id="sr"><span>Econ</span></td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Buddhika Nipun</td>
+                    <td id="r">10</td>
+                    <td id="b">1</td>
+                    <td id="four">1</td>
+                    <td id="six">1</td>
+                    <td id="sr">10</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Tendai Chatara</td>
+                    <td id="r">7.0</td>
+                    <td id="b">0</td>
+                    <td id="four">35</td>
+                    <td id="six">1</td>
+                    <td id="sr">5.0</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Blessing Muzarabani</td>
+                    <td id="r">10.0</td>
+                    <td id="b">0</td>
+                    <td id="four">63</td>
+                    <td id="six">1</td>
+                    <td id="sr">6.30</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Richard Ngararava</td>
+                    <td id="r">9.0</td>
+                    <td id="b">1</td>
+                    <td id="four">46</td>
+                    <td id="six">2</td>
+                    <td id="sr">5.11</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Wellington Masakadza</td>
+                    <td id="r">10.0</td>
+                    <td id="b">0</td>
+                    <td id="four">42</td>
+                    <td id="six">1</td>
+                    <td id="sr">4.20</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tb" id="t2" style="display:none">
+            <table id="bt" class="batt">
+                <tr id="topic">
+                    <td width="72%" id="bat"><span>Batting</span></td>
+                    <td id="r"><span>R</span></td>
+                    <td id="b"><span>B</span></td>
+                    <td id="four"><span>4s</span></td>
+                    <td id="six"><span>6s</span></td>
+                    <td id="sr"><span>S/R</span></td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Dhanuka Munasinghe (C)<br><span>run out(sub)</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Thenuka Yatawara (VC)<br><span>c Blessing Muzzarabani b Wellington Masakadza</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Navindu Mediwake<br><span>c & b Ryan Burl</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Eeshan Nimesh<br><span>rrun out (Ryan Burl)</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Kavindu Gayantha<br><span>b Blessing Muzarabani</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Pasindu Shavindya<br><span>not out</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Hasintha Dilshan<br><span>not out</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Janith Santhush<br><span>run out(sub)</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Deshan Weerasinghe<br><span>run out(sub)</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Vinuk Thismalpola<br><span>run out(sub)</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Githmin Dulsara <br><span>run out(sub)</span></td>
+                    <td id="r">0</td>
+                    <td id="b">0</td>
+                    <td id="four">0</td>
+                    <td id="six">0</td>
+                    <td id="sr">0</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Extras</td>
+                    <td id="r" style="position: relative; top: 0">7</td>
+                    <td width="23%" id="ex">(NB 1, W 3,B 2,LB 1)</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="bat">Total runs</td>
+                    <td id="r" style="position: relative;top: 0">254</td>
+                    <td width="23%">(9 wkts, 50 ov)</td>
+                </tr>
+            </table>
+            <table id="bt">
+                <tr>
+                    <td id="fall">
+                        Fall of Wickets<br> 80/1 <span>(K.Mendis, 17.2 ov)</span> 101/2 <span>(p.Nissanka, 22.2 ov)</span> 107/3 <span>(K.Mendis, 23.1 ov)</span> 149/4 <span>(D.Chandimal, 30.6 ov)</span> 185/5 <span>(D.Shanaka, 38.4 ov)</span> 193/6 <span>(C.Asalanka, 40.4 ov)</span>                        241/7 <span>(R.Mendis, 47.4 ov)</span> 247/8 <span>(D.Chameera, 48.5 ov)</span> 249/9 <span>(C.Karunarathne), 49.2 ov</span>
+                    </td>
+                </tr>
+            </table>
+            <!-- <table id="bt">
+                <tr>
+                    <td id="fall">
+                        Yet to Bat<br><span>Kavisha Abhishake (C) , Nipul Yansith (VC) , Bhanuka Nayanajith , Bimsara Anjana , Sasanka Udana , Pahasara Jayasuriya , Lasith Madhuka , Sanuth Kalhan , Lakruwan Kasun , Lumbini Randika (G) , Chathuni Ranasinghe (G) , Masha Wickramasinghe (G)</span>
+                    </td>
+                </tr>
+            </table> -->
+            <table id="ball" class="ball">
+                <tr id="topic">
+                    <td id="bat"><span>Bowling</span></td>
+                    <td id="r"><span>O</span></td>
+                    <td id="b"><span>M</span></td>
+                    <td id="four"><span>R</span></td>
+                    <td id="six"><span>W</span></td>
+                    <td id="sr"><span>Econ</span></td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">efdf</td>
+                    <td id="r">df</td>
+                    <td id="b">df</td>
+                    <td id="four">df</td>
+                    <td id="six">dfd</td>
+                    <td id="sr">fd</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Tendai Chatara</td>
+                    <td id="r">7.0</td>
+                    <td id="b">0</td>
+                    <td id="four">35</td>
+                    <td id="six">1</td>
+                    <td id="sr">5.0</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Blessing Muzarabani</td>
+                    <td id="r">10.0</td>
+                    <td id="b">0</td>
+                    <td id="four">63</td>
+                    <td id="six">1</td>
+                    <td id="sr">6.30</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Richard Ngararava</td>
+                    <td id="r">9.0</td>
+                    <td id="b">1</td>
+                    <td id="four">46</td>
+                    <td id="six">2</td>
+                    <td id="sr">5.11</td>
+                </tr>
+            </table>
+            <table id="ball" class="ball">
+                <tr>
+                    <td id="bat">Wellivxfvfxxa</td>
+                    <td id="r">10.0</td>
+                    <td id="b">0</td>
+                    <td id="four">42</td>
+                    <td id="six">1</td>
+                    <td id="sr">4.20</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer container cont">
+        <span>Toss:</span>
+        <!-- SW won the toss and decided to bat<br> -->
+    </div>
+
+
+</body>
+
+</html>

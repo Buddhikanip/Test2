@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAT Challenge Trophy 2022</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo final.png" />
+
+    
+    
+</head>
+
+<body onload="pageReloadStart(); match();">
+
+    <div class="backgroundDiv">
+
+        <div class="upperDiv">
+
+            <p class="vs">VS</p>
+
+            <img src="stat.png" class="team1" />  <!--Edit-->
+
+            <img src="bull.png" class="team2" />  <!--Edit-->
+
+            <img src="logo.png" class="logo" onclick="insLogo();" />
+
+            <div class="scoreBoard" id="p" onclick="scoreboard();">
+
+                <img src="bull.png" class="battedTeamLogo" />  <!--Edit-->
+
+                <p class="battedTeamScore">0/0 (0.0)</p>
+
+                <img src="stat.png" class="battingTeamLogo" />  <!--Edit-->
+
+                <p class="score" id="score">0/0</p>
+
+                <p class="overs" id="overs">(0.0)</p>
+
+            </div>
+
+            <p class="matchSummary" onclick="matchSummary();"><u>Match</u></p>
+
+        </div>
+
+        <div class="lowerDiv">
+
+            <img src="irr.png" class="iWarriors" onclick="iWarriors();" />
+
+            <img src="bull.png" class="bulls" onclick="bulls();" />
+
+            <img src="med.png" class="medi" onclick="medi();" />
+
+            <img src="str.png" class="strikers" onclick="strikers();" />
+
+            <img src="b.png" class="thunders" onclick="thunders();" />
+
+            <img src="stat.png" class="stat" onclick="stat();" />
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

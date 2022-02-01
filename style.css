@@ -1,0 +1,615 @@
+/* .backgroundDiv {
+    width: 100%;
+    height: 100vh;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+
+.upperDiv {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.lowerDiv {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(94, 53, 0);
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.iWarriors {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: -400px;
+}
+
+.iWarriors:hover {
+    width: 160px;
+    height: 160px;
+}
+
+.medi {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: -230px;
+}
+
+.medi:hover {
+    width: 160px;
+    height: 160px;
+}
+
+.stat {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: 230px;
+}
+
+.stat:hover {
+    width: 160px;
+    height: 160px;
+}
+
+.thunders {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: -80px;
+}
+
+.thunders:hover {
+    width: 160px;
+    height: 160px;
+}
+
+.bulls {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: 80px;
+}
+
+.bulls:hover {
+    width: 160px;
+    height: 160px;
+}
+
+.strikers {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: 400px;
+}
+
+.strikers:hover {
+    width: 160px;
+    height: 160px;
+}
+
+.vs {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Arial";
+    margin-top: 60px;
+}
+
+.team1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -100px;
+}
+
+.team2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 120px;
+    cursor: pointer;
+}
+
+.scoreBoard {
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    margin-top: 240px;
+    background-color: rgb(25, 119, 241);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0px 0px 4px 2px rgb(184, 184, 184);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.battingTeamLogo {
+    width: 70px;
+    height: 70px;
+    margin-left: -170px;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.score {
+    font-family: "Arial";
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 70px;
+}
+
+.overs {
+    font-family: "Arial";
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 40px;
+}
+
+.battedTeamLogo {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    align-self: flex-start;
+    margin-left: -30px;
+}
+
+.battedTeamScore {
+    color: white;
+    position: absolute;
+    align-self: flex-start;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 70px;
+    margin-top: 4px;
+    font-family: "Arial";
+}
+
+.matchSummary {
+    position: absolute;
+    align-self: flex-end;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: "Forte";
+    cursor: pointer;
+}
+
+.matchSummary:hover {
+    font-size: 32px;
+    color: rgb(218, 218, 218);
+}
+
+.iWarriorsImageHolder {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(223, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mediImageHolder {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(14, 163, 94);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.statImageHolder {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(161, 161, 161);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.strikersImageHolder {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(23, 129, 190);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.thundersImageHolder {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(231, 59, 59);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bullsImageHolder {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(30, 17, 150);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.iWarriorsTeam {
+    width: 50%;
+    height: 100vh;
+    margin-left: 25%;
+}
+
+.instarHolder {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 2px 1px rgb(218, 218, 218);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.instarHolder:hover {
+    box-shadow: 0px 0px 5px 3px rgb(197, 197, 197);
+}
+
+.instarLogo {
+    width: 40px;
+}
+
+.follow {
+    color: rgb(255, 255, 255);
+    transform: rotate(270deg);
+    margin-top: -30px;
+    width: 300px;
+    position: absolute;
+    margin-left: -130px;
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.summaryBackgroundDiv {
+    width: 100%;
+    height: 100vh;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.pointTable {
+    width: 40%;
+    height: 50px;
+    background-color: rgb(27, 123, 248);
+    position: absolute;
+    margin-top: 10px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.m1 {
+    width: 40%;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    margin-top: 100px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.m2 {
+    width: 40%;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    margin-top: 200px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.m3 {
+    width: 40%;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    margin-top: 300px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.m4 {
+    width: 40%;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    margin-top: 400px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.m5 {
+    width: 40%;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    margin-top: 500px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.m6 {
+    width: 40%;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    margin-top: 600px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.mFinal {
+    width: 40%;
+    height: 70px;
+    background-color: rgb(255, 0, 85);
+    position: absolute;
+    margin-top: 750px;
+    color: white;
+    font-size: 40px;
+    font-family: "Forte";
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.socialMedia {
+    width: 60%;
+    height: 60px;
+    margin-top: 850px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMedia img:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 2px rgb(201, 201, 201);
+    border-radius: 100%;
+}
+
+.followuson {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Arial";
+    margin-left: 0px;
+}
+
+.summaryBackgroundDiv button:hover {
+    box-shadow: 0px 0px 4px 2px rgb(190, 190, 190);
+}
+
+.fb {
+    margin-left: 10px;
+}
+
+.ins {
+    margin-left: 30px;
+    width: 45px;
+}
+
+.h1 {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+}
+
+@media(max-width:1400px) {
+    .iWarriorsTeam {
+        width: 66%;
+        margin-left: 17%;
+    }
+}
+
+@media(max-width:1000px) {
+    .iWarriors {
+        position: absolute;
+        margin-left: -160px;
+    }
+    .bulls {
+        position: absolute;
+        margin-left: 15px;
+    }
+    .thunders {
+        position: absolute;
+        margin-left: 190px;
+    }
+    .medi {
+        position: absolute;
+        margin-top: 200px;
+        margin-left: -160px;
+    }
+    .stat {
+        position: absolute;
+        margin-left: 15px;
+        margin-top: 200px;
+    }
+    .strikers {
+        position: absolute;
+        margin-left: 190px;
+        margin-top: 200px;
+    }
+    .iWarriorsTeam {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .instarHolder {
+        align-self: flex-start;
+    }
+    .h1 {
+        margin-top: 200px;
+        width: 100%;
+    }
+    .summaryBackgroundDiv button {
+        width: 80%;
+    }
+}
+
+@media(max-width:574px) {
+    .iWarriors {
+        margin-left: -90px;
+    }
+    .bulls {
+        margin-left: 90px;
+    }
+    .thunders {
+        margin-top: 400px;
+        position: absolute;
+        margin-left: -90px;
+    }
+    .strikers {
+        margin-top: 400px;
+        position: absolute;
+        margin-left: 90px;
+    }
+    .stat {
+        margin-left: 90px;
+    }
+    .medi {
+        margin-left: -90px;
+    }
+    .summaryBackgroundDiv button {
+        width: 80%;
+    }
+    .followuson {
+        font-size: 15px;
+        margin-left: -10px;
+    }
+    .fb {
+        width: 40px;
+    }
+    .ins {
+        width: 35px;
+    }
+}
+
+@media(max-width:285px) {
+    .scoreBoard {
+        width: 280px;
+    }
+    .overs {
+        margin-left: 215px;
+    }
+    .iWarriors {
+        margin-left: -70px;
+    }
+    .bulls {
+        margin-left: 70px;
+    }
+    .stat {
+        margin-left: 70px;
+    }
+    .medi {
+        margin-left: -70px;
+    }
+    .strikers {
+        margin-left: 70px;
+    }
+    .thunders {
+        margin-left: -70px;
+    }
+    .followuson {
+        margin-left: -35px;
+    }
+}
+
+
+
